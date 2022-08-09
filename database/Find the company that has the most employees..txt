@@ -1,0 +1,4 @@
+select top 1 [company_name] 
+from (
+select  count ([person_id]) as num_of_peo, [company_name]from [dbo].[works]group by [company_name] ) 
+Aorder by num_of_peo desc
